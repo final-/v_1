@@ -395,10 +395,10 @@ body{text-align:right;font-family:myfont;}
 <div class="row-fluid">
 <div class="span5 offset2">
 <div class="dash-tile dash-tile-balloon no-opacity">
-<div class="dash-tile-header"><i class="icon-user"></i> <a href="javascript:void(0)">John Doe</a></div>
+<div class="dash-tile-header"> <a href="javascript:void(0)">John Doe</a> <i class="icon-user"></i></div>
 <div class="dash-tile-content">
 <div class="dash-tile-content-inner-fluid dash-tile-content-light content-text">
-<img src="<?php echo base_url();?>images/image_light_120x120.png" tppabs="http://pixelcave.com/demo/uadmin/img/placeholders/image_light_120x120.png" alt="avatar" class="pull-left">
+<img src="<?php echo base_url();?>images/image_light_120x120.png"  alt="avatar" class="pull-left">
 <p><strong>John Doe</strong> is a web designer and works in <a href="javascript:void(0)">Example Company</a>.</p>
 <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices, justo vel imperdiet gravida.</em></p>
 </div>
@@ -407,16 +407,23 @@ body{text-align:right;font-family:myfont;}
 </div>
 <div class="span3">
 <div class="dash-tile dash-tile-leaf no-opacity">
-<div class="dash-tile-header"><i class="icon-magic"></i> Similar Articles</div>
+<div class="dash-tile-header"> مواضيع مشابهه <i class="icon-magic"></i></div>
 <div class="dash-tile-content">
 <div class="dash-tile-content-inner-fluid dash-tile-content-light">
 <ul class="icons">
-<li><i class="icon-arrow-right"></i> <a href="javascript:void(0)">Article's Title #1</a></li>
-<li><i class="icon-arrow-right"></i> <a href="javascript:void(0)">Article's Title #2</a></li>
-<li><i class="icon-arrow-right"></i> <a href="javascript:void(0)">Article's Title #3</a></li>
-<li><i class="icon-arrow-right"></i> <a href="javascript:void(0)">Article's Title #4</a></li>
-<li><i class="icon-arrow-right"></i> <a href="javascript:void(0)">Article's Title #5</a></li>
-<li><i class="icon-arrow-right"></i> <a href="javascript:void(0)">Article's Title #6</a></li>
+<li> <a href="javascript:void(0)">Article's Title #1</a> <i style="padding:0 0 0 10px;" class="icon-arrow-left"></i></li>
+
+<li> <a href="javascript:void(0)">Article's Title #1</a> <i style="padding:0 0 0 10px;" class="icon-arrow-left"></i></li>
+
+<li> <a href="javascript:void(0)">Article's Title #1</a> <i style="padding:0 0 0 10px;" class="icon-arrow-left"></i></li>
+
+<li> <a href="javascript:void(0)">Article's Title #1</a> <i style="padding:0 0 0 10px;" class="icon-arrow-left"></i></li>
+
+<li> <a href="javascript:void(0)">Article's Title #1</a> <i style="padding:0 0 0 10px;" class="icon-arrow-left"></i></li>
+
+<li> <a href="javascript:void(0)">Article's Title #1</a> <i style="padding:0 0 0 10px;" class="icon-arrow-left"></i></li>
+
+
 </ul>
 </div>
 </div>
@@ -429,6 +436,8 @@ body{text-align:right;font-family:myfont;}
 <div class="dash-tile-header">Comments (7)</div>
 <div class="dash-tile-content">
 <div class="dash-tile-content-inner-fluid dash-tile-content-light">
+
+<!---------------------->
 <div class="media media-hover">
 <a href="javascript:void(0)" class="pull-left">
 <img src="<?php echo base_url();?>images/image_dark_64x64.png" tppabs="http://pixelcave.com/demo/uadmin/img/placeholders/image_dark_64x64.png" class="media-object img-polaroid" alt="Image">
@@ -438,60 +447,28 @@ body{text-align:right;font-family:myfont;}
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices, justo vel imperdiet gravida, urna ligula hendrerit nibh, ac cursus nibh sapien in purus.</p>
 </div>
 </div>
+<!---------------------->
+
 <div class="media media-hover remove-margin">
 <a href="javascript:void(0)" class="pull-left">
-<img src="<?php echo base_url();?>images/image_dark_64x64.png" tppabs="http://pixelcave.com/demo/uadmin/img/placeholders/image_dark_64x64.png" class="media-object img-polaroid" alt="Image">
+<img src="<?php echo base_url();?>images/image_dark_64x64.png" class="media-object img-polaroid"  alt="Image">
 </a>
 <div class="media-body">
 <h5 class="media-heading"><small><span class="label label-info">March 19, 2013</span> في </small><a href="javascript:void(0)">User2</a> </h5>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices, justo vel imperdiet gravida, urna ligula hendrerit nibh, ac cursus nibh sapien in purus.</p>
+
 <div class="media">
 <a href="javascript:void(0)" class="pull-left">
-<img src="<?php echo base_url();?>images/image_dark_64x64.png"  alt="Image">
+<img src="<?php echo base_url();?>images/image_dark_64x64.png"  class="media-object img-polaroid" alt="Image">
 </a>
 <div class="media-body">
-<h5 class="media-heading"> <small><span class="label label-info">March 19, 2013</span> في </small><a href="javascript:void(0)">User4</a></h5>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices, justo vel imperdiet gravida, urna ligula hendrerit nibh, ac cursus nibh sapien in purus.</p>
-</div>
-</div>
-<div class="media">
-<a href="javascript:void(0)" class="pull-left">
-<img src="<?php echo base_url();?>images/image_dark_64x64.png" tppabs="http://pixelcave.com/demo/uadmin/img/placeholders/image_dark_64x64.png" class="media-object img-polaroid" alt="Image">
-</a>
-<div class="media-body">
-<h5 class="media-heading"><a href="javascript:void(0)">User3</a> <small>on <span class="label label-info">March 19, 2013</span> <span class="label label-inverse">21:09</span></small></h5>
+<h5 class="media-heading"> <small><span class="label label-info">March 19, 2013</span> في </small> <a href="javascript:void(0)">User3</a></h5>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices, justo vel imperdiet gravida, urna ligula hendrerit nibh, ac cursus nibh sapien in purus.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="media media-hover">
-<a href="javascript:void(0)" class="pull-left">
-<img src="<?php echo base_url();?>images/image_dark_64x64.png" tppabs="http://pixelcave.com/demo/uadmin/img/placeholders/image_dark_64x64.png" class="media-object img-polaroid" alt="Image">
-</a>
-<div class="media-body">
-<h5 class="media-heading"><a href="javascript:void(0)">User3</a> <small>on <span class="label label-info">March 15, 2013</span> <span class="label label-inverse">16:17</span></small></h5>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices, justo vel imperdiet gravida, urna ligula hendrerit nibh, ac cursus nibh sapien in purus.</p>
-</div>
-</div>
-<div class="media media-hover">
-<a href="javascript:void(0)" class="pull-left">
-<img src="<?php echo base_url();?>images/image_dark_64x64.png" tppabs="http://pixelcave.com/demo/uadmin/img/placeholders/image_dark_64x64.png" class="media-object img-polaroid" alt="Image">
-</a>
-<div class="media-body">
-<h5 class="media-heading"><a href="javascript:void(0)">User4</a> <small>on <span class="label label-info">March 11, 2013</span> <span class="label label-inverse">15:00</span></small></h5>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices, justo vel imperdiet gravida, urna ligula hendrerit nibh, ac cursus nibh sapien in purus.</p>
-</div>
-</div>
-<div class="media media-hover">
-<a href="javascript:void(0)" class="pull-left">
-<img src="<?php echo base_url();?>images/image_dark_64x64.png" tppabs="http://pixelcave.com/demo/uadmin/img/placeholders/image_dark_64x64.png" class="media-object img-polaroid" alt="Image">
-</a>
-<div class="media-body">
-<h5 class="media-heading"><a href="javascript:void(0)">User5</a> <small>on <span class="label label-info">March 10, 2013</span> <span class="label label-inverse">20:00</span></small></h5>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices, justo vel imperdiet gravida, urna ligula hendrerit nibh, ac cursus nibh sapien in purus.</p>
-</div>
-</div>
+<!-------------------------------------------->
 <div class="media media-hover">
 <a href="javascript:void(0)" class="pull-left">
 <img src="<?php echo base_url();?>images/image_dark_64x64.png" tppabs="http://pixelcave.com/demo/uadmin/img/placeholders/image_dark_64x64.png" class="media-object img-polaroid" alt="Image">
@@ -499,10 +476,10 @@ body{text-align:right;font-family:myfont;}
 <div class="media-body">
 <form class="form-horizontal" onsubmit="return false;">
 <div class="control-group">
-<textarea id="example-textarea-large" class="textarea-large textarea-elastic" rows="4"></textarea>
+<textarea id="example-textarea-large"  class="textarea-large textarea-elastic" rows="4"></textarea>
 </div>
 <div class="control-group">
-<button class="btn btn-success"><i class="icon-edit"></i> Post Comment</button>
+<input type="submit" value="تعليق" style="padding:10px;"  class="btn btn-success"> 
 </div>
 </form>
 </div>
