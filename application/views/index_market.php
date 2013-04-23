@@ -8,7 +8,7 @@
         
         -->
         <meta charset="UTF-8">
-        <title>uAdmin - Professional, Responsive and Flat Admin Template</title>
+        <title>السوق</title>
         <meta name="description" content="uAdmin is a Professional, Responsive and Flat Admin Template created by pixelcave and published on Themeforest">
         <meta name="author" content="pixelcave">
         <meta name="robots" content="index, follow">
@@ -47,24 +47,51 @@
                         <a href="<?php echo base_url() ?>site/market">الخدمات</a> <i class="icon-shopping-cart"></i> </li>
 
                 </ul>
-                <?php include 'header2.php';?>
+                <?php include 'header2.php'; ?>
                 <!---------------------------- start of content---------------------------------------->
 
 
                 <ul class="thumbnails" data-toggle="gallery-options">
-                    <li class="span4">
-                        <div class="thumbnails-options">
-                            <div class="btn-group">
+                    <?php
+                    if ($this->uri->segment(3) != '' && $this->uri->segment(4) != '') {
+                        $c_id = $this->uri->segment(3);
+                        $sc_id = $this->uri->segment(4);
+                        $sql = 'SELECT id,c_id, name, price_point, left( detail, 100 )  AS detail, photo_name, c_id, sc_id FROM service where sc_id=' . $sc_id;
+                        $query = $this->db->query($sql);
+                    } else if ($this->uri->segment(3) != '') {
+                        $c_id = (int) $this->uri->segment(3);
+                        $sql = 'SELECT id,c_id, name, price_point, left( detail, 100 )  AS detail, photo_name, c_id, sc_id FROM service where c_id=' . $c_id;
+                        $query = $this->db->query($sql);
+                    } else {
+                        $sql = 'SELECT id,c_id, name, price_point, left( detail, 100 )  AS detail, photo_name, c_id, sc_id FROM service';
+                        $query = $this->db->query($sql);
+                    }
+                    if (isset($query)) {
+                        if ($query->num_rows() > 0) {
+                            $rows = $query->result();
+                            foreach ($rows as $row) {
+                                ?>
+                                <li class="span4" style="width: 200px; margin: 20px; padding: auto;">
+                                    <div class="thumbnail" style="height: 220px;">
+                                        <a href="site/market_deatils/<?php echo $row->id ?>/<?php echo $row->c_id; ?>">  
+                                            <img src="<?php echo base_url(); ?>imagesService/thumb/<?php echo $row->photo_name; ?>" height="100" >
+                                        </a>
+                                        <h4 style="color:#036"><?php echo $row->name ?></h4>
+                                            <!--<p style="color:#036">تفاصيل للخدمه تفاصيل للخدمه تفاصيل للخدمه تفاصيل للخدم </p>-->
+                                        <button type="button" class="btn btn-warning">طلب الخدمة</button>
 
-                            </div>
-                        </div>
-                        <div class="thumbnail">
-                            <a href="">  <img src="<?php echo base_url(); ?>images/t.jpg" ></a>
-                            <a href="">  <h4 style="color:#036">تصميم موقع مع تقديم استضافه له</h4> </a>
-                            <a href=""> <p style="color:#036">تفاصيل للخدمه تفاصيل للخدمه تفاصيل للخدمه تفاصيل للخدمه تفاصيل للخدمه تفاصيل للخدمه تفاصيل للخدمه تفاصيل للخده </p></a>
-                        </div>
-                    </li>
-                  
+                                    </div>
+                                </li>
+
+                                <?php
+                            }
+                        } else {
+                            ?>
+                            <h3 style="float:right;color:#fff;width:800px;text-align:center">لا توجد نتائج بحث يرجى أعاده المحاولة</h3> 
+                            <?php
+                        }
+                    }
+                    ?>
 
                 </ul>
             </div>
