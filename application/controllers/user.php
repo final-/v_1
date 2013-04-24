@@ -98,7 +98,9 @@ class User extends CI_Controller {
             $this->load->library('form_validation');
 
             $this->form_validation->set_rules('email', 'Email', 'required|trim|xss_clean|valid_email|max_length[100]|
-											 ');
+										 ');
+			  $this->form_validation->set_rules('bank_email', 'payment_email', 'required|trim|xss_clean|valid_email|max_length[100]|
+			 ');
             $this->form_validation->set_rules('country', 'Country', 'required|trim|xss_clean');
             $this->form_validation->set_rules('city', 'city', 'required|max_length[30]|trim|xss_clean');
             $this->form_validation->set_rules('zip_code', 'Zip code', 'required|max_length[30]|trim|xss_clean|numeric');
@@ -139,6 +141,7 @@ class User extends CI_Controller {
                         $data['phone'] = $user_data['phone'];
                         $data['country'] = $user_data['country'];
                         $data['zip_code'] = $user_data['zip_code'];
+						$data['payment_email'] = $user_data['payment_email'];
                         $data['pic'] = $user_data['pic'];
                     }
                     $this->load->view('user_edit', $data);
@@ -149,15 +152,16 @@ class User extends CI_Controller {
                 $this->load->model('site_model');
                 if ($this->site_model->select_user($id)) {
                     $user_data = $this->site_model->select_user($id);
-                    $data['id'] = $user_data['id'];
-                    $data['username'] = $user_data['username'];
-                    $data['email'] = $user_data['email'];
-                    $data['city'] = $user_data['city'];
-                    $data['address'] = $user_data['address'];
-                    $data['phone'] = $user_data['phone'];
-                    $data['country'] = $user_data['country'];
-                    $data['zip_code'] = $user_data['zip_code'];
-                    $data['pic'] = $user_data['pic'];
+                        $data['id'] = $user_data['id'];
+                        $data['username'] = $user_data['username'];
+                        $data['email'] = $user_data['email'];
+                        $data['city'] = $user_data['city'];
+                        $data['address'] = $user_data['address'];
+                        $data['phone'] = $user_data['phone'];
+                        $data['country'] = $user_data['country'];
+                        $data['zip_code'] = $user_data['zip_code'];
+						$data['payment_email'] = $user_data['payment_email'];
+                        $data['pic'] = $user_data['pic'];
                 }
 
                 $data['not_updated'] = 'عفوا لا يمكن تعديل بيناتك حاليا حاول مره اخري من فضلك';

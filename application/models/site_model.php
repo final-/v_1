@@ -108,12 +108,12 @@ class Site_model extends CI_Model {
 
     ////////////////////////////////////////////////////////////
     function select_user($id) {
-        $query = "select id,email,username,phone,country,city,address,profile_pic,zip_code from user where id=?";
+        $query = "select id,email,username,phone,country,city,address,profile_pic,zip_code,payment_email from user where id=?";
         $result = $this->db->query($query, $id);
         if ($result->num_rows() == 1) {
             $data_result = array('id' => $result->row(0)->id, 'username' => $result->row(0)->username, 'address' => $result->row(0)->address,
                 'city' => $result->row(0)->city, 'country' => $result->row(0)->country, 'email' => $result->row(0)->email, 'pic' => $result->row(0)->profile_pic,
-                'phone' => $result->row(0)->phone, 'zip_code' => $result->row(0)->zip_code
+                'phone' => $result->row(0)->phone, 'zip_code' => $result->row(0)->zip_code,'payment_email' => $result->row(0)->payment_email
             );
             return $data_result;
         } else {

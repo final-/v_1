@@ -362,7 +362,7 @@ input{width:560px;}
 </ul>
 
 <?php include('header2.php')?>
-
+<h3>* يجب عليك ادخال البيانات التي يوجد بجوارها هذه العلامه </h3>
 <?php echo form_open('site/sign_user_validation',array('id'=>'form-validation'));  ?>
     <div style="color:#FC3;margin-right:140px;">
 									 <?php if(isset($regist)){echo '<p style="margin-left:30px;color:#3C3;">'.$regist.'</p>' ;}else{ 

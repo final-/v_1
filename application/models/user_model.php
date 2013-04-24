@@ -66,6 +66,7 @@ function do_upload($id){
 			$data=array(
 						
 						'email'=>$this->input->post('email'),
+						'payment_email'=>$this->input->post('email'),
 						'country'=>$this->input->post('country'),
 						'city'=>$this->input->post('city'),
 						'address'=>$this->input->post('address'),
@@ -74,7 +75,7 @@ function do_upload($id){
 						
 						);
 			
-			$query_str="update user set email=?,country=?,city=?,address=?,phone=?,zip_code=? where id = '{$id}' ";
+			$query_str="update user set email=?,payment_email=?,country=?,city=?,address=?,phone=?,zip_code=? where id = '{$id}' ";
 			$result= $this->db->query($query_str,$data);
 			if($result){
 					return true;

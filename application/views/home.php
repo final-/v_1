@@ -6,7 +6,7 @@
 <head>
 
 <meta charset="UTF-8">
-<title>uAdmin - Professional, Responsive and Flat Admin Template</title>
+<title>لوحه تحكم | شلينات دوت كوم</title>
 <meta name="description" content="uAdmin is a Professional, Responsive and Flat Admin Template created by pixelcave and published on Themeforest">
 <meta name="author" content="pixelcave">
 <meta name="robots" content="index, follow">

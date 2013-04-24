@@ -37,6 +37,7 @@
 
     <style type="text/css">
         body{font-family:myfont;text-align:right}
+		#pic{width:50px;height:40px;}
     </style>
     <body>
         <div id="page-container">
@@ -149,7 +150,7 @@
                                                 <h5 class="page-header-sub">
                                                     <a href="chat_service/<?php echo $record->order_id; ?>/<?php echo $record->e_id ?>"><?php echo $record->name; ?>
 
-                                                        <img src="<?php echo base_url(); ?>imagesService/thumb/<?php echo $record->photo_name; ?>"  width="40" height="50"/>
+                                                        <img id="pic" src="<?php echo base_url(); ?>imagesService/thumb/<?php echo $record->photo_name; ?>"  />
                                                     </a></h5>
                                                 <div class="progress progress-warning">
                                                     <div class="bar" style="width: 100%"><i class="icon-time"></i> لم ينفذ</div>
@@ -188,7 +189,7 @@
                                                 ?>
                                                 <h5 class="page-header-sub">
                                                     <a href="chat_service/<?php echo $record->order_id; ?>/<?php echo $record->e_id ?>"><?php echo $record->name; ?>
-                                                        <img src="<?php echo base_url(); ?>imagesService/thumb/<?php echo $record->photo_name; ?>"  width="40" height="50"/>
+                                                        <img id="pic" src="<?php echo base_url(); ?>imagesService/thumb/<?php echo $record->photo_name; ?>"  />
                                                     </a></h5>
                                                 <div class="progress progress-info">
                                                     <div class="bar" style="width: 100%"><i class="icon-asterisk icon-spin"></i> جارى التنفيذ </div>

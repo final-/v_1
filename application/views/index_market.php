@@ -30,8 +30,10 @@
         <script src="<?php echo base_url(); ?>js/modernizr-2.6.2-respond-1.1.0.min.js" ></script>
         <style type="text/css">
             body{font-family:myfont;text-align:right}
-            .thumbnail{height:350px;}
+            
+			 .thumbnail img{width:250px; height:130px;}
             .thumbnail a{color:#036}
+			.btn-warning:hover{text-decoration:none}
 
         </style>
     </head>
@@ -76,9 +78,12 @@
                                         <a href="site/market_deatils/<?php echo $row->id ?>/<?php echo $row->c_id; ?>">  
                                             <img src="<?php echo base_url(); ?>imagesService/thumb/<?php echo $row->photo_name; ?>" height="100" >
                                         </a>
-                                        <h4 style="color:#036"><?php echo $row->name ?></h4>
+                                        <h4 style="color:#036;margin-bottom:25px;"><?php echo $row->name ?></h4>
                                             <!--<p style="color:#036">تفاصيل للخدمه تفاصيل للخدمه تفاصيل للخدمه تفاصيل للخدم </p>-->
-                                        <button type="button" class="btn btn-warning">طلب الخدمة</button>
+                                    
+                                        <a href="#" class="btn-warning" style="padding:8px;" >اطلب الخدمه</a>
+                                        
+                                         <h4 style="color:#036;text-align:left;margin-top:-20px;padding-left:5px;"> <?php echo $row->price_point ?> <small style="text-align:left">شيلن</small></h4>
 
                                     </div>
                                 </li>
@@ -147,7 +152,7 @@
                 <h5 class="page-header-sub hidden-phone">Image</h5>
                 <div class="form-horizontal hidden-phone">
                     <div class="control-group">
-                        <img src="<?php echo base_url(); ?>images/image_dark_120x120.png" tppabs="http://pixelcave.com/demo/uadmin/img/placeholders/image_dark_120x120.png" alt="image">
+                        <img src="<?php echo base_url(); ?>images/image_dark_120x120.png"  alt="image">
                     </div>
                     <div class="control-group">
                         <form action="http://pixelcave.com/demo/uadmin/index.php" class="dropzone">
